@@ -1,0 +1,698 @@
+/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+html, body {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+     margin: 0; padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+.ull-individual{
+  overflow: hidden;
+}
+
+/*========================================================================
+for check box
+==========================================================================*/
+.full-area .control {
+    font-family: arial;
+    display: block;
+    position: relative;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 29px;
+}
+.full-area span .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+    outline: 0px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+    .control input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+.control_indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: #e6e6e6;
+    border: 0px dotted #000000;
+}
+.control-radio .control_indicator {
+    border-radius: 50%;
+}
+
+.control:hover input ~ .control_indicator,
+.control input:focus ~ .control_indicator {
+    background: #cccccc;
+}
+
+.control input:checked ~ .control_indicator {
+    background: #2aa1c0;
+}
+.control:hover input:not([disabled]):checked ~ .control_indicator,
+.control input:checked:focus ~ .control_indicator {
+    background: #0e6647d;
+}
+.control input:disabled ~ .control_indicator {
+    background: #e6e6e6;
+    opacity: 0.6;
+    pointer-events: none;
+}
+.control_indicator:after {
+    box-sizing: unset;
+    content: '';
+    position: absolute;
+    display: none;
+}
+.control input:checked ~ .control_indicator:after {
+    display: block;
+}
+.control-radio .control_indicator:after {
+    left: 7px;
+    top: 7px;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background: #ffffff;
+}
+.control-radio input:disabled ~ .control_indicator:after {
+    background: #7b7b7b;
+}
+
+
+/***********************************************************************************************
+
+home page style
+
+*****************************************************************************************************/
+.hero-bkg-animated{padding-top: 180px;}
+
+.full-area table {
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+    background: #8BC34A;
+    padding: 10px;
+    font-family: verdana;
+    opacity: .80;
+    border-radius: 6px;
+}
+.full-individual table{
+    background:#fff;
+}
+
+
+.full-area input[type=submit] {
+    padding: 10px;
+    width: 46%;
+    padding-bottom: 30px !important;
+    font-size: 18px;
+    margin: 8px 100px;
+    border-radius: 18px !important;
+    cursor: pointer;
+    color: #fff !important;
+    font-weight: bold;
+    border-bottom: 3px solid #10AE71 !importantt;
+    background: #4CAF50!important;
+    font-family: sans-serif;
+    font-family: roboto;
+}
+.full-area table td {
+    color: #fff;
+    text-align: left;
+    padding: 0px 8px;
+     font-family: sans-serif;
+}
+
+.form-area .container {
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 6px;
+    padding: 10px;
+    font-family: verdana;
+    opacity: .9;
+    color: #000;
+    width: 684px;
+}
+.form-area .form-control {
+    height: 50px;
+    color: #555;
+    background-color: #fff;
+    border: 2px solid #2ecc71;
+    border-radius: 4px;
+}
+.form-area input[type=checkbox], input[type=radio] {
+    margin: 1px 2px 0px;
+    float: left;
+    margin-top: 1px\9;
+    line-height: normal;
+    height: 21px;
+    width: 20px;
+    cursor: pointer;
+}
+.borderimg img {
+    width: 251px;
+    margin-top: 0px;
+    margin-left: 87px;
+}
+.header h2 {
+color: #019766;
+}
+.roomdetails table th {
+    background: #537CB4;
+    padding: 0px 5px;
+    font-size: 11px;
+    color: #fff;
+    font-family: sans-serif;
+    text-align: center;
+}
+.roomdetails ul li {
+    list-style: circle;
+    font-size: 11px;
+    color: #390;
+}
+.roomdetails table img {
+    width: 121px;
+    margin: 26px 0px 0px 7px;
+    height: 78px;
+    background: #fff;
+    padding: 1px;
+    border: 1px solid #BBB;
+}
+.roomdetails tr {
+    border: 1px solid #ddd;
+}
+.roomdetails td {
+    border: 1px solid #ddd;
+}
+.roomdetails td i.glyphicon.glyphicon-user {
+    font-size: 10px;
+    color: #21A1FB;
+    margin-left: 14px;
+}
+.roomdetails ul {
+    margin-left: -13px;
+    float: right;
+    margin-right: 10px;
+}
+.roomdetails button, input, optgroup, select, textarea {
+    font-family: inherit;
+    font-size: 10px;
+    line-height: 1.15;
+    margin: 6px;
+}
+
+/*===============================================================
+ Select option icon desing
+==================================================================  */
+select#soflow, select#soflow-color {
+   -webkit-appearance: button;
+   -webkit-border-radius: 2px;
+   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+   -webkit-padding-end: 20px;
+   -webkit-padding-start: 2px;
+   -webkit-user-select: none;
+   background-image: url(../assets/icon.png), -webkit-linear-gradient(#FAFAFA, #ffffff 40%, #fff);
+   background-position: 97% center;
+   background-repeat: no-repeat;
+   border-radius: 4px;
+   color: #999;
+   font-size: 13px;
+   overflow: hidden;
+   padding: 5px 10px;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+ 
+}
+.full-area .control-radio .control_indicator {
+    border-radius:0%;
+}
+.full-area span {
+    margin-left: 30px;
+}
+.full-area td img {
+    width: 268px;
+    margin-bottom: 4px;
+}
+.room-model .modal-body p {
+    color: #003580;
+    font-size: 11px;
+    line-height: 1.8;
+    margin-top: 10px;
+}
+.room-model .modal-body li {
+    color: #003580;
+    font-size: 11px;
+    line-height: 1.8;
+}
+.room-model .model-body b, strong {
+    font-weight: bolder;
+    color: #003580;
+    font-size: 12px;
+}
+.room-model .modal-header{
+    background: #003580;
+    color: #fff;
+}
+.room-model .close {
+    font-size: 28px;
+    color: #fff;
+    opacity: inherit;
+}
+.gallery img {
+    width: 177px;
+    background: #fff;
+    border: 3px solid #ddd;
+    padding: 1px;
+}
+.roomdetails .panel-default>.panel-heading {
+    background-color: #DFF0D8;
+
+}
+.quick-query .form-control {width: 96%;}
+
+.quick-query h3{color: #51B5F2;}
+
+
+
+
+
+
+
+/*===========================================================================================================
+
+individula page desing code here
+=============================================================================================================*/
+.full-individual .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control{
+  background:#fff;
+}
+.full-individual .leftside {
+    background: #E6EDF6;
+}
+.rightside{
+    background: #E6EDF6;
+}
+
+.rightside .header img {
+    width: 168px;
+    margin-left: 95px;
+    margin-top: 0px;
+}
+
+.full-individual input[type=checkbox], input[type=radio] {
+    margin: 3px 0px 0px;
+    cursor: pointer;
+    width: 20px;
+    margin-top: 1px\9;
+    line-height: normal;
+    height: 20px;
+}
+.checkbox span {
+    margin-left: 25px;
+    font-size: 14px;
+    font-family: sans-serif;
+    line-height: 2;
+}
+.full-individual .btn {border-radius: unset}
+.head p {
+    background: #ddd;
+    padding: 0px 19px;
+    color: #000;
+}
+.head {
+    margin-top: 7px;
+}
+.head p span {
+    float: right;
+    font-weight: bold;
+}
+.full-individual .header {
+    margin-bottom: 34px;
+}
+.full-individual .logo img {
+    margin-left: 29%;
+    width: 331px;
+    padding: 8px;
+}
+.full-individual .header {
+    margin-bottom: 34px;
+    background: #DFF0D8;
+    padding: 5px 0px;
+}
+.full-individual .header h4 {
+    margin-top: -4px;
+    color: #0896ff;
+}
+.full-individual .header h4 span i {
+    color: #FFA500;
+}
+.full-individual .panel-heading a {
+    display: block;
+}
+
+.full-individual .form-group {
+    margin-top: 8px;
+}
+.full-individual label {
+    font-weight: normal;
+    color: #000;
+    font-size:13px;
+}
+
+.full-individual .rightside .header h4 {
+    margin-top: 19px;
+    color: #0896ff;
+}
+
+
+
+
+
+
+
+
+/*===================================== ====
+confirm message page style 
+===========================================*/
+   .confirm{
+      width:400px;
+      margin: 0 auto;
+      background: #dff0d8;
+      padding: 20px;
+      -webkit-box-shadow: -1px 7px 13px 0px rgba(135,214,107,0.67);
+      -moz-box-shadow: -1px 7px 13px 0px rgba(135,214,107,0.67);
+      box-shadow: -1px 7px 13px 0px rgba(135,214,107,0.67); }
+    .headtext h2{color: #007F0A}
+    .headtext h2 {
+    color: #007F0A;
+    font-family: Srisakdi;
+    text-align: center;
+    font-weight: bold;
+}
+.headtext p {
+    color: #007F0A;
+    text-align: center;
+    font-size: 16px;
+    font-family: Srisakdi;
+    -webkit-box-shadow: -1px 7px 13px 0px rgba(135,214,107,0.67);
+-moz-box-shadow: -1px 7px 13px 0px rgba(135,214,107,0.67);
+box-shadow: -1px 7px 13px 0px rgba(135,214,107,0.67);
+}
+.logo img {
+    width: 126px;
+    padding: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
